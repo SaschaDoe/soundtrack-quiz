@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Soundtrack-Quiz</title>
+  <meta name="description" content="Soundtrack-Quizabend: Listen, Trivia und ein Player, der Werbung stumm vorlädt.">
+  <meta name="theme-color" content="#15121f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#/" class="brand"><span class="brand-icon">♫</span> Soundtrack-Quiz</a>
+    <div class="topbar-actions">
+      <label class="switch" title="Titel, Werk und Video verbergen, bis du aufdeckst">
+        <input type="checkbox" id="quizMode">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Quizmodus</span>
+      </label>
+    </div>
+  </header>
+
+  <main id="app" aria-live="polite"></main>
+
+  <div id="nowPlaying" class="now-playing" hidden>
+    <button class="np-info" id="npJump" type="button">
+      <span class="np-num" id="npNum"></span>
+      <span class="np-text">
+        <span class="np-title" id="npTitle"></span>
+        <span class="np-status" id="npStatus"></span>
+      </span>
+    </button>
+    <button class="btn btn-icon" id="npToggle" type="button" aria-label="Pause">❚❚</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "Soundtrack-Quiz",
+  "short_name": "Soundtracks",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#15121f",
+  "theme_color": "#15121f",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

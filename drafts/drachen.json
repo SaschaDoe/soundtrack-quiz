@@ -1,0 +1,195 @@
+{
+  "title": "Drachen",
+  "theme": "drachen",
+  "description": "Von Fuchur bis Smaug – Soundtracks aus Filmen, Serien und Spielen mit Drachen.",
+  "tracks": [
+    {
+      "work": "Drachenzähmen leicht gemacht",
+      "workOriginal": "How to Train Your Dragon",
+      "title": "Test Drive",
+      "type": "Film",
+      "year": 2010,
+      "composer": "John Powell",
+      "url": "https://www.youtube.com/watch?v=zTSXiF_cxG8",
+      "start": 0,
+      "trivia": [
+        "Läuft beim ersten gemeinsamen Flug von Hicks und Ohnezahn mit der neuen Schwanzflosse.",
+        "John Powell bekam für den Score seine erste Oscar-Nominierung.",
+        "Diese Aufnahme ist eine Neueinspielung (Silva Screen) – das Original-Soundtrack-Video ist in Deutschland gesperrt."
+      ],
+      "duration": 160
+    },
+    {
+      "work": "House of the Dragon",
+      "title": "Main Title",
+      "type": "Serie",
+      "year": 2022,
+      "composer": "Ramin Djawadi",
+      "url": "https://www.youtube.com/watch?v=xzefbu2ye3c",
+      "start": 0,
+      "hint": "Klingt wie eine sehr bekannte Serie – ist aber deren Prequel.",
+      "trivia": [
+        "Djawadi hat schon Game of Thrones vertont – der Vorspann greift bewusst das berühmte GoT-Thema auf.",
+        "Die Serie basiert auf George R. R. Martins Buch „Feuer und Blut“ und spielt rund 200 Jahre vor Game of Thrones.",
+        "Im Mittelpunkt steht das Haus Targaryen auf dem Höhepunkt seiner Drachenmacht."
+      ],
+      "duration": 105
+    },
+    {
+      "work": "The Elder Scrolls V: Skyrim",
+      "title": "Dragonborn",
+      "type": "Spiel",
+      "year": 2011,
+      "composer": "Jeremy Soule",
+      "url": "https://www.youtube.com/watch?v=813-3iL5OsE",
+      "start": 0,
+      "trivia": [
+        "Der Chor singt in der fiktiven Drachensprache des Spiels (Dovahzul).",
+        "Rund 30 Sänger wurden mehrfach übereinander aufgenommen, damit es nach einem riesigen Chor klingt.",
+        "Skyrim erschien am 11.11.2011 – das Thema ist eine Variation der klassischen Elder-Scrolls-Melodie."
+      ],
+      "duration": 236
+    },
+    {
+      "work": "Die unendliche Geschichte",
+      "workOriginal": "The NeverEnding Story",
+      "title": "The NeverEnding Story (Limahl)",
+      "type": "Film",
+      "year": 1984,
+      "composer": "Giorgio Moroder / Klaus Doldinger",
+      "url": "https://www.youtube.com/watch?v=2WN0T-Ee3q4",
+      "start": 0,
+      "trivia": [
+        "Der Song stammt von Giorgio Moroder und wurde von Limahl (Ex-Kajagoogoo) gesungen.",
+        "In der ursprünglichen deutschen Kinofassung lief nur Klaus Doldingers Score – Moroders Songs kamen für die internationale Fassung dazu.",
+        "Der Glücksdrache Fuchur heißt im Englischen „Falkor“. Michael Ende war mit dem Film so unzufrieden, dass er seinen Namen aus dem Abspann streichen lassen wollte."
+      ],
+      "duration": 210
+    },
+    {
+      "work": "Dragonheart",
+      "title": "To the Stars",
+      "type": "Film",
+      "year": 1996,
+      "composer": "Randy Edelman",
+      "url": "https://www.youtube.com/watch?v=2oUal4fiEAM",
+      "start": 0,
+      "trivia": [
+        "Der Drache Draco wird im Original von Sean Connery gesprochen.",
+        "Draco war einer der ersten komplett computeranimierten Hauptfiguren eines Realfilms (ILM).",
+        "Edelmans Dragonheart-Musik wurde später in unzähligen Trailern wiederverwendet."
+      ],
+      "duration": 194
+    },
+    {
+      "work": "Der Hobbit: Smaugs Einöde",
+      "workOriginal": "The Hobbit: The Desolation of Smaug",
+      "title": "I See Fire (Ed Sheeran)",
+      "type": "Film",
+      "year": 2013,
+      "composer": "Ed Sheeran",
+      "url": "https://www.youtube.com/watch?v=GvGLjYdMzJs",
+      "start": 0,
+      "trivia": [
+        "Ed Sheeran schrieb den Song für den Abspann des zweiten Hobbit-Films.",
+        "Der Drache Smaug wird von Benedict Cumberbatch gesprochen und per Motion Capture gespielt.",
+        "Sheeran hatte später auch einen Cameo-Auftritt in Game of Thrones."
+      ],
+      "duration": 298
+    },
+    {
+      "work": "Chihiros Reise ins Zauberland",
+      "workOriginal": "Spirited Away / Sen to Chihiro no Kamikakushi",
+      "title": "The Dragon Boy",
+      "type": "Anime-Film",
+      "year": 2001,
+      "composer": "Joe Hisaishi",
+      "url": "https://www.youtube.com/watch?v=jVzVfltnmYA",
+      "start": 0,
+      "hint": "Der Drache ist hier eigentlich ein Flussgeist.",
+      "trivia": [
+        "Der „Drachenjunge“ ist Haku – in Wahrheit der Geist des Kohaku-Flusses.",
+        "Der Film gewann 2003 den Oscar als bester Animationsfilm.",
+        "Joe Hisaishi hat die Musik zu fast allen Filmen von Hayao Miyazaki komponiert."
+      ],
+      "duration": 248
+    },
+    {
+      "work": "Spyro the Dragon",
+      "title": "Stone Hill",
+      "type": "Spiel",
+      "year": 1998,
+      "composer": "Stewart Copeland",
+      "url": "https://www.youtube.com/watch?v=7TXNx-pMiAE",
+      "start": 0,
+      "trivia": [
+        "Komponist Stewart Copeland war Schlagzeuger der Band The Police.",
+        "Copeland spielte die Level selbst durch, um die Musik auf das Spielgefühl abzustimmen.",
+        "Stone Hill ist das allererste Level des PlayStation-Klassikers von Insomniac Games."
+      ],
+      "duration": 130
+    },
+    {
+      "work": "Tabaluga",
+      "title": "Nessaja (Ich wollte nie erwachsen sein)",
+      "type": "Musik / TV",
+      "composer": "Peter Maffay",
+      "url": "https://www.youtube.com/watch?v=sNm7WmIxgec",
+      "start": 0,
+      "trivia": [
+        "Tabaluga ist der kleine grüne Drache aus Grünland – erfunden von Peter Maffay, das erste Tabaluga-Album erschien 1983.",
+        "Nessaja ist die weise alte Schildkröte, der Tabaluga begegnet.",
+        "Maffay sang das Lied später auch im Duett mit Helene Fischer."
+      ],
+      "duration": 252
+    },
+    {
+      "work": "Eragon",
+      "title": "Keep Holding On (Avril Lavigne)",
+      "type": "Film",
+      "year": 2006,
+      "composer": "Avril Lavigne & Dr. Luke",
+      "url": "https://www.youtube.com/watch?v=trp6FZs2zlM",
+      "start": 0,
+      "trivia": [
+        "Der Song wurde für den Eragon-Film geschrieben und lief im Abspann.",
+        "Buchautor Christopher Paolini begann „Eragon“ mit 15 Jahren zu schreiben.",
+        "Der Film floppte bei Kritikern – die geplanten Fortsetzungen wurden nie gedreht."
+      ],
+      "duration": 243
+    },
+    {
+      "work": "Dungeons & Dragons: Ehre unter Dieben",
+      "workOriginal": "Dungeons & Dragons: Honor Among Thieves",
+      "title": "Dungeons and Dragons",
+      "type": "Film",
+      "year": 2023,
+      "composer": "Lorne Balfe",
+      "url": "https://www.youtube.com/watch?v=fzTCR8fRD1s",
+      "start": 0,
+      "trivia": [
+        "Chris Pine spielt den Barden Edgin, Michelle Rodriguez die Barbarin Holga.",
+        "Running Gag: der übergewichtige rote Drache Themberchaud.",
+        "Lorne Balfe hat u. a. auch Mission: Impossible – Fallout vertont."
+      ],
+      "duration": 95
+    },
+    {
+      "work": "Dragon Ball Z",
+      "title": "Cha-La Head-Cha-La",
+      "type": "Anime-Serie",
+      "year": 1989,
+      "composer": "Hironobu Kageyama (Gesang)",
+      "url": "https://www.youtube.com/watch?v=pYnLO7MVKno",
+      "start": 0,
+      "trivia": [
+        "Das japanische Opening lief bei den ersten rund 200 Folgen von Dragon Ball Z.",
+        "Der Drache Shenlong erscheint, wenn alle sieben Dragon Balls gesammelt sind, und erfüllt einen Wunsch.",
+        "Sänger Hironobu Kageyama ist einer der bekanntesten Anime-Sänger Japans."
+      ],
+      "duration": 200
+    }
+  ],
+  "created": "2026-11-08",
+  "id": "2026-11-08-drachen"
+}
