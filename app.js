@@ -201,7 +201,15 @@ class TrackPlayer {
         this.ourPause = true;
         p.pauseVideo();
         this.set('ended');
+      } else if (st === YT_STATE.PAUSED && !this.adMuted) {
+        // Browser hat den Start mit Ton blockiert (oder Pause ohne Event) -> UI korrigieren
+        this.pausedMs = (this.pausedMs || 0) + 250;
+        if (this.pausedMs >= 1500) {
+          this.pausedMs = 0;
+          this.set('paused', 'Falls nichts zu hören war: nochmal auf „Weiter“ tippen.');
+        }
       } else {
+        this.pausedMs = 0;
         // Werbung mitten im Abspielen: Status -1 mit laufender Zeit, oder "PLAYING" mit stehender Zeit
         if (st === YT_STATE.PLAYING && !moved) this.stallMs += 250; else this.stallMs = 0;
         const midAd = adRunning || this.stallMs >= 1500;
