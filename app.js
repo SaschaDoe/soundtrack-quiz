@@ -106,6 +106,7 @@ class TrackPlayer {
       // erneutes Tippen = Nutzergeste -> nochmal stumm anstoßen (hilft, wenn Autoplay blockiert war)
       try { this.player.mute(); this.player.playVideo(); } catch { /* noch nicht bereit */ }
       this.prepSince = Date.now();
+      this.stuckMs = 0;
       if (this.status === 'error') return;
       this.set('ad');
       return;
@@ -175,6 +176,8 @@ class TrackPlayer {
     let st, t;
     try { st = p.getPlayerState(); t = p.getCurrentTime() || 0; } catch { return; }
     const moved = this.lastT >= 0 && Math.abs(t - this.lastT) > 0.05;
+    // Beobachtet: Während Werbung meldet die API Status -1 (UNSTARTED), die Zeit läuft aber (= Werbezeit).
+    const adRunning = st === YT_STATE.UNSTARTED && moved;
 
     if (this.status === 'ad') {
       const waited = Date.now() - this.prepSince;
@@ -184,33 +187,33 @@ class TrackPlayer {
         p.pauseVideo();
         p.seekTo(this.start, true);
         this.set('ready');
-      } else if (waited > 7000 && (st === YT_STATE.UNSTARTED || st === YT_STATE.CUED) && !this.note) {
-        this.set('ad', 'Startet nicht? Tippe auf „Erneut anstoßen“.');
+      } else if (adRunning) {
+        this.stuckMs = 0;
+        const note = `Werbung läuft gerade (${fmtTime(t)}).`;
+        if (this.note !== note) this.set('ad', note);
+      } else if (!moved && (st === YT_STATE.UNSTARTED || st === YT_STATE.CUED || st === YT_STATE.PAUSED)) {
+        this.stuckMs = (this.stuckMs || 0) + 250;
+        const hint = 'Startet nicht? Tippe auf „Erneut anstoßen“.';
+        if (this.stuckMs > 6000 && this.note !== hint) this.set('ad', hint);
       }
     } else if (this.status === 'playing' || this.status === 'midad') {
       if (this.end && t >= this.end) {
         this.ourPause = true;
         p.pauseVideo();
         this.set('ended');
-      } else if (st === YT_STATE.PLAYING) {
-        // Zeit steht, obwohl "PLAYING" -> sehr wahrscheinlich Mid-Roll-Werbung: stumm schalten
-        if (!moved) {
-          this.stallMs += 250;
-          if (this.stallMs >= 1500 && !this.adMuted) {
-            p.mute();
-            this.adMuted = true;
-            this.set('midad');
-          }
-        } else {
-          this.stallMs = 0;
-          if (this.adMuted) {
-            p.unMute();
-            this.adMuted = false;
-            this.set('playing');
-          }
-        }
       } else {
-        this.stallMs = 0;
+        // Werbung mitten im Abspielen: Status -1 mit laufender Zeit, oder "PLAYING" mit stehender Zeit
+        if (st === YT_STATE.PLAYING && !moved) this.stallMs += 250; else this.stallMs = 0;
+        const midAd = adRunning || this.stallMs >= 1500;
+        if (midAd && !this.adMuted) {
+          p.mute();
+          this.adMuted = true;
+          this.set('midad');
+        } else if (!midAd && this.adMuted && st === YT_STATE.PLAYING && moved) {
+          p.unMute();
+          this.adMuted = false;
+          this.set('playing');
+        }
       }
     }
     this.lastT = t;
